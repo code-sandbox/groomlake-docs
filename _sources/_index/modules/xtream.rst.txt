@@ -1,0 +1,5 @@
+core.xtream
+============
+
+.. automodule:: lib.core.xtream
+    :members:

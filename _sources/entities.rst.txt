@@ -1,0 +1,7 @@
+.. toctree::
+    :maxdepth: 2
+
+Entities
+========
+.. automodule:: lib.core.entities
+    :members:

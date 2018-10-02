@@ -1,0 +1,632 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>core.entities &#8212; GroomLake 2018.09.30 documentation</title>
+    <link rel="stylesheet" href="../../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Common Modules" href="../common.html" />
+    <link rel="prev" title="core.xtream" href="xtream.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../common.html" title="Common Modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="xtream.html" title="core.xtream"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">GroomLake v:2018.09.30 Docs</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../core.html" accesskey="U">Core Modules</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lib.core.entities">
+<span id="core-entities"></span><h1>core.entities<a class="headerlink" href="#module-lib.core.entities" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lib-core-entities">
+<span id="entities"></span><h2><a class="reference internal" href="#module-lib.core.entities" title="lib.core.entities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lib.core.entities</span></code></a><a class="headerlink" href="#lib-core-entities" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lib.core.entities.ListItem">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">ListItem</code><a class="headerlink" href="#lib.core.entities.ListItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class containing common logic for parsing / serializing an API response 
+<code class="docutils literal notranslate"><span class="pre">entity</span></code> (JSON, XML, etc.)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">subclasses are responsible for populating member data.</p>
+</div>
+<dl class="method">
+<dt id="lib.core.entities.ListItem.querystring">
+<code class="descname">querystring</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.ListItem.querystring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a serialized string from current <code class="docutils literal notranslate"><span class="pre">querydict</span></code>. The
+<a class="reference internal" href="#lib.core.entities.ListItem.querystring" title="lib.core.entities.ListItem.querystring"><code class="xref py py-func docutils literal notranslate"><span class="pre">querystring()</span></code></a> contains information related to navigating around
+the different categories and subcategories of content on a host server.</p>
+<p>It should contain any data needed to make the request for the next 
+<code class="docutils literal notranslate"><span class="pre">payload</span></code> that is NOT contained in the descriptive metadata (e.g. 
+numeric id’s).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal notranslate"><span class="pre">str</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lib.core.entities.XArchive">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">XArchive</code><a class="headerlink" href="#lib.core.entities.XArchive" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes v1 JSON parser for archive channels</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inheritance:</th><td class="field-body"><a class="reference internal" href="#lib.core.entities.ListItem" title="lib.core.entities.ListItem"><code class="xref py py-func docutils literal notranslate"><span class="pre">ListItem()</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lib.core.entities.XArchive.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>element</em>, <em>xsection</em>, <em>s_id</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.XArchive.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive class values from JSON <code class="docutils literal notranslate"><span class="pre">element</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">element:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">json</span></code>) JSON dictionary to be parsed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.Xsection</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">s_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">int</span></code>) channel ID (‘id’ key)</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">self</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Expected <code class="docutils literal notranslate"><span class="pre">element</span></code> schema</p>
+<div class="literal-block-wrapper last docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;253196&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;epg_id&quot;</span><span class="p">:</span> <span class="s2">&quot;25&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;U3RyZWFtIFRpdGxl&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;lang&quot;</span><span class="p">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="mi">1537770600</span><span class="p">,</span>
+    <span class="nt">&quot;end&quot;</span><span class="p">:</span> <span class="mi">1537772400</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;U3RyZWFtIERlc2NyaXB0aW9u&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;channel_id&quot;</span><span class="p">:</span> <span class="s2">&quot;channel.tv&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lib.core.entities.XCategory">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">XCategory</code><a class="headerlink" href="#lib.core.entities.XCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes JSON parser for categories</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inheritance:</th><td class="field-body"><a class="reference internal" href="#lib.core.entities.ListItem" title="lib.core.entities.ListItem"><code class="xref py py-func docutils literal notranslate"><span class="pre">ListItem()</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lib.core.entities.XCategory.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>element</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.XCategory.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive class values from JSON <code class="docutils literal notranslate"><span class="pre">element</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">element:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">json</span></code>) JSON dictionary to be parsed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.Xsection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">self</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Expected <code class="docutils literal notranslate"><span class="pre">element</span></code> schema:</p>
+<div class="literal-block-wrapper last docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;parent_id&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;61&quot;</span><span class="p">,</span> 
+    <span class="nt">&quot;category_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Category Title&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lib.core.entities.XChannel">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">XChannel</code><a class="headerlink" href="#lib.core.entities.XChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes v1 tv_archive (index) JSON object parser</p>
+<dl class="method">
+<dt id="lib.core.entities.XChannel.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>element</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.XChannel.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive class values from JSON <code class="docutils literal notranslate"><span class="pre">element</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">element:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">json</span></code>) JSON dictionary to be parsed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.Xsection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">self</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Expected <code class="docutils literal notranslate"><span class="pre">element</span></code> schema:</p>
+<div class="literal-block-wrapper last docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;direct_source&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;added&quot;</span><span class="p">:</span> <span class="s2">&quot;1503960346&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;num&quot;</span><span class="p">:</span> <span class="mi">859</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Channel Title&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;epg_channel_id&quot;</span><span class="p">:</span> <span class="s2">&quot;channel.tv&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tv_archive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;stream_type&quot;</span><span class="p">:</span> <span class="s2">&quot;live&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;stream_id&quot;</span><span class="p">:</span> <span class="mi">3974</span><span class="p">,</span>
+    <span class="nt">&quot;custom_sid&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;stream_icon&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.your-iptv.com/thumb.png&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;12&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tv_archive_duration&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lib.core.entities.XEpisode">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">XEpisode</code><a class="headerlink" href="#lib.core.entities.XEpisode" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes JSON parser for series episodes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inheritance:</th><td class="field-body"><a class="reference internal" href="#lib.core.entities.ListItem" title="lib.core.entities.ListItem"><code class="xref py py-func docutils literal notranslate"><span class="pre">ListItem()</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lib.core.entities.XEpisode.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>element</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.XEpisode.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive class values from JSON <code class="docutils literal notranslate"><span class="pre">element</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">element:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">json</span></code>) JSON dictionary to be parsed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.Xsection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">self</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Expected <code class="docutils literal notranslate"><span class="pre">element</span></code> schema:</p>
+<div class="literal-block-wrapper last docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;00:41:48&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;video&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="nt">&quot;audio&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="nt">&quot;duration_secs&quot;</span><span class="p">:</span> <span class="mi">2508</span><span class="p">,</span>
+        <span class="nt">&quot;bitrate&quot;</span><span class="p">:</span> <span class="mi">3030</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;direct_source&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;added&quot;</span><span class="p">:</span> <span class="s2">&quot;1538050304&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;TVEpisode.S04E23.720p.HDTV.x264&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;season&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="nt">&quot;custom_sid&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;container_extension&quot;</span><span class="p">:</span> <span class="s2">&quot;mkv&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;episode_num&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;74579&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lib.core.entities.XSeason">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">XSeason</code><a class="headerlink" href="#lib.core.entities.XSeason" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes JSON parser for season</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inheritance:</th><td class="field-body"><a class="reference internal" href="#lib.core.entities.ListItem" title="lib.core.entities.ListItem"><code class="xref py py-func docutils literal notranslate"><span class="pre">ListItem()</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lib.core.entities.XSeason.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>element</em>, <em>xsection</em>, <em>s_id</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.XSeason.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive class values from JSON <code class="docutils literal notranslate"><span class="pre">element</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">element:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">json</span></code>) JSON dictionary to be parsed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.Xsection</span></code></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">s_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">int</span></code>) season ID</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">self</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Expected <code class="docutils literal notranslate"><span class="pre">element</span></code> schema:</p>
+<div class="literal-block-wrapper last docutils container" id="id5">
+<div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id5" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Season 6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;air_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-26&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;overview&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cover_big&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.your-iptv.com/noposter.jpg&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cover&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.your-iptv.com/noposter.jpg&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;episode_count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;season_number&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">105457</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lib.core.entities.XSeries">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">XSeries</code><a class="headerlink" href="#lib.core.entities.XSeries" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes JSON parser for series</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inheritance:</th><td class="field-body"><a class="reference internal" href="#lib.core.entities.ListItem" title="lib.core.entities.ListItem"><code class="xref py py-func docutils literal notranslate"><span class="pre">ListItem()</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lib.core.entities.XSeries.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>element</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.XSeries.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive class values from JSON <code class="docutils literal notranslate"><span class="pre">element</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">element:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">json</span></code>) JSON dictionary to be parsed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.Xsection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">self</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Expected <code class="docutils literal notranslate"><span class="pre">element</span></code> schema:</p>
+<div class="literal-block-wrapper last docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id6" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;plot&quot;</span><span class="p">:</span> <span class="s2">&quot;a riveting plot description&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Series Title.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;last_modified&quot;</span><span class="p">:</span> <span class="s2">&quot;1538050307&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rating&quot;</span><span class="p">:</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;cover&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.your-iptv.com/cover.jpg&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;series_id&quot;</span><span class="p">:</span> <span class="mi">524</span><span class="p">,</span>
+    <span class="nt">&quot;cast&quot;</span><span class="p">:</span> <span class="s2">&quot;Jason Beghe, Jesse Lee Soffer, Tracy Spiridakos&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;num&quot;</span><span class="p">:</span> <span class="mi">107</span><span class="p">,</span>
+    <span class="nt">&quot;director&quot;</span><span class="p">:</span> <span class="s2">&quot;Dick Wolf&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;releaseDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2014-01-08&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;episode_run_time&quot;</span><span class="p">:</span> <span class="s2">&quot;42&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;genre&quot;</span><span class="p">:</span> <span class="s2">&quot;Crime / Drama&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;811&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;youtube_trailer&quot;</span><span class="p">:</span> <span class="s2">&quot;W8i_GTifjPLM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backdrop_path&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;http://www.your-iptv.com/58841_tv_backdrop_0.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;http://www.your-iptv.com/58841_tv_backdrop_1.jpg&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;http://www.your-iptv.com/58841_tv_backdrop_2.jpg&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;rating_5based&quot;</span><span class="p">:</span> <span class="mf">3.5</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="lib.core.entities.XStream">
+<em class="property">class </em><code class="descclassname">lib.core.entities.</code><code class="descname">XStream</code><a class="headerlink" href="#lib.core.entities.XStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes JSON parser for streams</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inheritance:</th><td class="field-body"><a class="reference internal" href="#lib.core.entities.ListItem" title="lib.core.entities.ListItem"><code class="xref py py-func docutils literal notranslate"><span class="pre">ListItem()</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="lib.core.entities.XStream.fromJSON">
+<code class="descname">fromJSON</code><span class="sig-paren">(</span><em>element</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.XStream.fromJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derive class values from JSON <code class="docutils literal notranslate"><span class="pre">element</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">element:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">json</span></code>) JSON dictionary to be parsed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.Xsection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">self</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Expected <code class="docutils literal notranslate"><span class="pre">element</span></code> schema:</p>
+<div class="literal-block-wrapper last docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">JSON</span><a class="headerlink" href="#id7" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;num&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Stream Title&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;stream_type&quot;</span><span class="p">:</span> <span class="s2">&quot;movie&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;stream_id&quot;</span><span class="p">:</span> <span class="mi">65051</span><span class="p">,</span>
+    <span class="nt">&quot;stream_icon&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.your-iptv.com/thumb.png&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rating&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;rating_5based&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;added&quot;</span><span class="p">:</span> <span class="s2">&quot;1528209939&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;593&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;container_extension&quot;</span><span class="p">:</span> <span class="s2">&quot;mp4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;custom_sid&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;direct_source&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="lib.core.entities.getJSON">
+<code class="descclassname">lib.core.entities.</code><code class="descname">getJSON</code><span class="sig-paren">(</span><em>jsonstr</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.entities.getJSON" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a parsed JSON python object from a json string</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">jsonstr:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) JSON string to be parsed</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">JSON (<code class="docutils literal notranslate"><span class="pre">object</span></code>)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../core.html">Core Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="xtream.html">core.xtream</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">core.entities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../common.html">Common Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="xtream.html"
+                        title="previous chapter">core.xtream</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../common.html"
+                        title="next chapter">Common Modules</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/_index/modules/entities.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div><div role="note" aria-label="Documentation">
+    <h3>Index</h3>
+    <ul class="this-page-menu">
+        <li>
+            <a href="../../py-modindex.html">Modules</a>
+        </li>
+        <li>
+            <a href="../../genindex.html">Index</a>
+        </li>
+    </ul>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../common.html" title="Common Modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="xtream.html" title="core.xtream"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">GroomLake v:2018.09.30 Docs</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../core.html" >Core Modules</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, FutureTech.
+      Last updated on Oct 02, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.1.
+    </div>
+  </body>
+</html>

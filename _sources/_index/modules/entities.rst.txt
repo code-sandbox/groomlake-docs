@@ -1,0 +1,5 @@
+core.entities
+=============
+
+.. automodule:: lib.core.entities
+    :members:

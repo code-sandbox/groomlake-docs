@@ -1,0 +1,17 @@
+GroomLake Documentation
++++++++++++++++++++++++
+
+Development/Staging for plugin.video.groomlake addon
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    _index/core
+    _index/common
+    _index/testing
+
+:Note:
+    *If you find any bugs, odd behavior, or have an idea for a new feature* 
+    `open an issue <https://path/to/repository.git/issues?state=open>`_
+    *on GitHub*

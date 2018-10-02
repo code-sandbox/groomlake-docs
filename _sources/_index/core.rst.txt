@@ -1,0 +1,16 @@
+Core Modules
+============
+
+:Reference: <HTTP Interface Docs>
+    `XtreamCodes Player v2 How-To <http://forum.xtream-codes.com/topic/3511-how-to-player-api-v2>`_
+
+.. toctree::
+    :maxdepth: 2
+    :glob:
+
+    modules/xtream
+    modules/entities
+
+
+
+

@@ -1,0 +1,550 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>core.xtream &#8212; GroomLake 2018.09.30 documentation</title>
+    <link rel="stylesheet" href="../../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/sidebar.js"></script>
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="core.entities" href="entities.html" />
+    <link rel="prev" title="Core Modules" href="../core.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="entities.html" title="core.entities"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../core.html" title="Core Modules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">GroomLake v:2018.09.30 Docs</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../core.html" accesskey="U">Core Modules</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-lib.core.xtream">
+<span id="core-xtream"></span><h1>core.xtream<a class="headerlink" href="#module-lib.core.xtream" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lib-core-xtream">
+<span id="xstream"></span><h2><a class="reference internal" href="#module-lib.core.xtream" title="lib.core.xtream"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lib.core.xtream</span></code></a><a class="headerlink" href="#lib-core-xtream" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="lib.core.xtream.XtreamClient">
+<em class="property">class </em><code class="descclassname">lib.core.xtream.</code><code class="descname">XtreamClient</code><span class="sig-paren">(</span><em>host</em>, <em>port</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>XtreamCodes IPTV Player HTTP API v2 wrapper</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Inheritance:</th><td class="field-body"><p class="first"><a class="reference internal" href="client.html#lib.common.client.BaseClient" title="lib.common.client.BaseClient"><code class="xref py py-func docutils literal notranslate"><span class="pre">lib.common.client.BaseClient()</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Params:</th><td class="field-body"><table class="first last docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">host:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) server domain e.g “<a class="reference external" href="http://www.your-iptv.net">http://www.your-iptv.net</a>”</td>
+</tr>
+<tr class="field-even field"><th class="field-name">port:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">int</span></code>) server port number (0-65535)</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><a class="reference internal" href="#lib.core.xtream.XtreamClient" title="lib.core.xtream.XtreamClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">XtreamClient</span></code></a> does not store a session username / password,
+consequently these values must be passed to any endpoint requests that
+require authentication.</p>
+</div>
+<p><a class="reference internal" href="#lib.core.xtream.XtreamClient" title="lib.core.xtream.XtreamClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">XtreamClient</span></code></a> makes the following methods available for:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Validating supplied user credentials.</dt>
+<dd><ul class="first last">
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_account_info" title="lib.core.xtream.XtreamClient.get_account_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_account_info()</span></code></a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Executing content queries to the server.</dt>
+<dd><ul class="first last">
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_category_list" title="lib.core.xtream.XtreamClient.get_category_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_category_list()</span></code></a></li>
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_section_index" title="lib.core.xtream.XtreamClient.get_section_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_section_index()</span></code></a></li>
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_category_index" title="lib.core.xtream.XtreamClient.get_category_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_category_index()</span></code></a></li>
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_series_content" title="lib.core.xtream.XtreamClient.get_series_content"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_series_content()</span></code></a></li>
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_series_index" title="lib.core.xtream.XtreamClient.get_series_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_series_index()</span></code></a></li>
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_archive_index" title="lib.core.xtream.XtreamClient.get_archive_index"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_archive_index()</span></code></a></li>
+<li><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(auth)</span></code> <a class="reference internal" href="#lib.core.xtream.XtreamClient.get_stream_info" title="lib.core.xtream.XtreamClient.get_stream_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_stream_info()</span></code></a></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Computing playable stream URLs.</dt>
+<dd><ul class="first last">
+<li><a class="reference internal" href="#lib.core.xtream.XtreamClient.archive_url" title="lib.core.xtream.XtreamClient.archive_url"><code class="xref py py-func docutils literal notranslate"><span class="pre">archive_url()</span></code></a></li>
+<li><a class="reference internal" href="#lib.core.xtream.XtreamClient.stream_url" title="lib.core.xtream.XtreamClient.stream_url"><code class="xref py py-func docutils literal notranslate"><span class="pre">stream_url()</span></code></a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.archive_url">
+<code class="descname">archive_url</code><span class="sig-paren">(</span><em>s_id</em>, <em>t_stamp</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.archive_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a resolvable stream URL for <code class="docutils literal notranslate"><span class="pre">s_id</span></code>, resume from <code class="docutils literal notranslate"><span class="pre">t_stamp</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">s_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) stream ID</td>
+</tr>
+<tr class="field-even field"><th class="field-name">t_stamp:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) resume playback from timestamp</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">archived stream URL 
+<code class="docutils literal notranslate"><span class="pre">$endpoint/timeshift.php?username={user}&amp;password={passwd}&amp;stream=s_id&amp;duration=120&amp;start=t_stamp</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(user,</span> <span class="pre">passwd)</span></code> key formatting</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_account_info">
+<code class="descname">get_account_info</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_account_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate credentials with API server, retrieve account / server metadata
+for <code class="docutils literal notranslate"><span class="pre">user</span></code> with <code class="docutils literal notranslate"><span class="pre">passwd</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><p><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">payload schema</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;user_info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;************&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;Active&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;is_trial&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;1516765449&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;auth&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> 
+        <span class="nt">&quot;allowed_output_formats&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;m3u8&quot;</span><span class="p">,</span> 
+            <span class="s2">&quot;ts&quot;</span>
+        <span class="p">],</span> 
+        <span class="nt">&quot;exp_date&quot;</span><span class="p">:</span> <span class="s2">&quot;1548301449&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;active_cons&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;************&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;max_connections&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span>
+    <span class="p">},</span> 
+    <span class="nt">&quot;server_info&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;https_port&quot;</span><span class="p">:</span> <span class="s2">&quot;443&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;162.218.64.160&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;time_now&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-10-02 05:51:05&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;server_protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;timestamp_now&quot;</span><span class="p">:</span> <span class="mi">1538455865</span><span class="p">,</span> 
+        <span class="nt">&quot;timezone&quot;</span><span class="p">:</span> <span class="s2">&quot;Europe/London&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;rtmp_port&quot;</span><span class="p">:</span> <span class="s2">&quot;8001&quot;</span><span class="p">,</span> 
+        <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If an account is <strong>cancelled</strong> or <strong>expired</strong> we want the user
+to know <em>immediadely</em>, not when the cache expires, so 
+<a class="reference internal" href="#lib.core.xtream.XtreamClient.get_account_info" title="lib.core.xtream.XtreamClient.get_account_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_account_info()</span></code></a> sets the <code class="docutils literal notranslate"><span class="pre">_cache=False</span></code> flag on
+<code class="xref py py-func docutils literal notranslate"><span class="pre">get_payload()</span></code></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_archive_index">
+<code class="descname">get_archive_index</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em>, <em>chan_id</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_archive_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve metadata for all archived streams with <code class="docutils literal notranslate"><span class="pre">chan_id</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">chan_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) channel ID</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_category_index">
+<code class="descname">get_category_index</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em>, <em>xsection</em>, <em>cat_id</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_category_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve metadata for all streams in <code class="docutils literal notranslate"><span class="pre">xsection</span></code> with <code class="docutils literal notranslate"><span class="pre">cat_id</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.XSection</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">cat_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) category ID</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_category_list">
+<code class="descname">get_category_list</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_category_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve metadata for all categories in <code class="docutils literal notranslate"><span class="pre">xsection</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.XSection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_section_index">
+<code class="descname">get_section_index</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_section_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve metadata for all streams in <code class="docutils literal notranslate"><span class="pre">xsection</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.XSection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_series_content">
+<code class="descname">get_series_content</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em>, <em>xsection</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_series_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve metadata for all series in <code class="docutils literal notranslate"><span class="pre">xsection</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.XSection</span></code></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_series_index">
+<code class="descname">get_series_index</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em>, <em>xsection</em>, <em>s_id</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_series_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve metadata for all series in <code class="docutils literal notranslate"><span class="pre">xsection</span></code> with <code class="docutils literal notranslate"><span class="pre">s_id</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.XSection</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">s_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) series ID</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.get_stream_info">
+<code class="descname">get_stream_info</code><span class="sig-paren">(</span><em>user</em>, <em>passwd</em>, <em>xsection</em>, <em>s_id</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.get_stream_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve metadata for stream in <code class="docutils literal notranslate"><span class="pre">xsection</span></code> with <code class="docutils literal notranslate"><span class="pre">s_id</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">user:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session username</td>
+</tr>
+<tr class="field-even field"><th class="field-name">passwd:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) session password</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.XSection</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">s_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) stream ID</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><code class="docutils literal notranslate"><span class="pre">str(payload)</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="lib.core.xtream.XtreamClient.stream_url">
+<code class="descname">stream_url</code><span class="sig-paren">(</span><em>xsection</em>, <em>s_id</em>, <em>s_ext='ts'</em><span class="sig-paren">)</span><a class="headerlink" href="#lib.core.xtream.XtreamClient.stream_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a resolvable stream URLfor <code class="docutils literal notranslate"><span class="pre">s_id</span></code> in <code class="docutils literal notranslate"><span class="pre">xsection</span></code> with
+container type <code class="docutils literal notranslate"><span class="pre">s_ext</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Params:</th><td class="field-body"><table class="first docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">xsection:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) key from <code class="docutils literal notranslate"><span class="pre">lib.core.xtream.XSection</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">s_id:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) stream ID</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">s_ext:</th><td class="field-body">(<code class="docutils literal notranslate"><span class="pre">str</span></code>) stream extension</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">stream URL <code class="docutils literal notranslate"><span class="pre">$endpoint/{user}/{passwd}/s_id.s_ext</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>require</strong> <code class="docutils literal notranslate"><span class="pre">(user,</span> <span class="pre">passwd)</span></code> key formatting</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+<h3><a href="../../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../core.html">Core Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">core.xtream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="entities.html">core.entities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../common.html">Common Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testing.html">Testing</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../core.html"
+                        title="previous chapter">Core Modules</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="entities.html"
+                        title="next chapter">core.entities</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/_index/modules/xtream.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div><div role="note" aria-label="Documentation">
+    <h3>Index</h3>
+    <ul class="this-page-menu">
+        <li>
+            <a href="../../py-modindex.html">Modules</a>
+        </li>
+        <li>
+            <a href="../../genindex.html">Index</a>
+        </li>
+    </ul>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="entities.html" title="core.entities"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../core.html" title="Core Modules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">GroomLake v:2018.09.30 Docs</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../core.html" >Core Modules</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, FutureTech.
+      Last updated on Oct 02, 2018.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.1.
+    </div>
+  </body>
+</html>
