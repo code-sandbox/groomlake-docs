@@ -13,5 +13,5 @@ Development/Staging for plugin.video.groomlake addon
 
 :Note:
     *If you find any bugs, odd behavior, or have an idea for a new feature* 
-    `open an issue <https://path/to/repository.git/issues?state=open>`_
+    `open an issue <https://github.com/code-sandbox/groomlake-docs/issues?state=open>`_
     *on GitHub*
