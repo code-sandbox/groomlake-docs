@@ -1,0 +1,5 @@
+core.client
+===========
+
+.. automodule:: lib.core.client
+    :members:

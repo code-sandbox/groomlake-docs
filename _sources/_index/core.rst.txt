@@ -8,9 +8,7 @@ Core Modules
     :maxdepth: 2
     :glob:
 
-    modules/xtream
+    modules/xclient
     modules/entities
-
-
-
-
+    modules/menu
+    modules/deviceutil

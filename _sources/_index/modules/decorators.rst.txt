@@ -1,0 +1,5 @@
+common.decorators
+=================
+
+.. automodule:: lib.common.decorators
+    :members:

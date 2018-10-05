@@ -1,0 +1,5 @@
+core.menu
+=========
+
+.. automodule:: lib.core.menu
+    :members:

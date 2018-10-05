@@ -1,0 +1,5 @@
+core.deviceutil
+===============
+
+.. automodule:: lib.core.deviceutil
+    :members:

@@ -1,0 +1,5 @@
+common.control
+==============
+
+.. automodule:: lib.common.control
+    :members:

@@ -9,3 +9,6 @@ Common Modules
 
     modules/cache
     modules/client
+    modules/control
+    modules/console
+    modules/decorators
